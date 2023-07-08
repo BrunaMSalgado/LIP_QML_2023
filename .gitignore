@@ -1,3 +1,4 @@
 *.h5
 .env*
 tarefa2.ipynb
+tarefa_grid_search.ipynb

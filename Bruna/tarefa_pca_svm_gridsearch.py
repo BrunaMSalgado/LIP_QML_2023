@@ -357,7 +357,7 @@ print("Test Score: ", test_score)
 
 
 # Save best_model using pickle
-with open('gridsearch_pca_svm.pickle', 'wb') as handle:
+with open('gridsearch_sem_pca_svm.pickle', 'wb') as handle:
     pickle.dump(grid_search, handle)
 
 

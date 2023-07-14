@@ -331,10 +331,10 @@ plt.show()
 # %%
 # Define the hyperparameter grid
 param_grid = {
-    'C': [0.0001,0.0005,0.0001,0.005, 0.1, 0.5, 1, 2, 5, 7, 10, 20, 50,70, 90, 100, 110, 130, 150, 200, 500, 700, 1000],
-    'gamma': [0.0001,0.0005,0.001,0.005,0.1,0.2,0.4,0.5,0.6,0.7,0.8,0.9,1,2,5,7,10, 'scale'],
+    'C': [0.0001,0.0001,0.1, 0.5, 1, 5, 10,50,100, 500,1000],
+    'gamma': [0.0001,0.001,0.1,0.5,1,5,10, 'scale'],
     'kernel': ['linear', 'poly', 'rbf'],
-    'degree': [1,2,3,4,5,7,9,10,13,14,15]
+    'degree': [1,2,3,4,5,10]
 }
 
 # Create an SVM classifier object
@@ -490,9 +490,9 @@ w_val = x_val["gen_xsec"].values
 w_test = x_test["gen_xsec"].values
 
 # get an array with the features for each set
-x_train = x_train[['MissingET_MET', 'Jet1_BTag']].values
-x_val = x_val[['MissingET_MET', 'Jet1_BTag']].values
-x_test = x_test[['MissingET_MET', 'Jet1_BTag']].values
+x_train = x_train[['MissingET_MET', 'FatJet1_Tau1']].values
+x_val = x_val[['MissingET_MET', 'FatJet1_Tau1']].values
+x_test = x_test[['MissingET_MET', 'FatJet1_Tau1']].values
 
 # %%
 print (test_sgn)
@@ -588,12 +588,11 @@ plt.show()
 # %%
 # Define the hyperparameter grid
 param_grid = {
-    'C': [0.0001,0.0005,0.0001,0.005, 0.1, 0.5, 1, 2, 5, 7, 10, 20, 50,70, 90, 100, 110, 130, 150, 200, 500, 700, 1000],
-    'gamma': [0.0001,0.0005,0.001,0.005,0.1,0.2,0.4,0.5,0.6,0.7,0.8,0.9,1,2,5,7,10, 'scale'],
+    'C': [0.0001,0.0001,0.1, 0.5, 1, 5, 10,50,100, 500,1000],
+    'gamma': [0.0001,0.001,0.1,0.5,1,5,10, 'scale'],
     'kernel': ['linear', 'poly', 'rbf'],
-    'degree': [1,2,3,4,5,7,9,10,13,14,15]
+    'degree': [1,2,3,4,5,10]
 }
-
 
 # Create an SVM classifier object
 svm_clf = svm.SVC(probability=True)

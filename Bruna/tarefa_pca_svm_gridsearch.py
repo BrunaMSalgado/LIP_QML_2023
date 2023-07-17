@@ -341,7 +341,7 @@ param_grid = {
 svm_clf = svm.SVC(probability=True)
 
 # Perform grid search with cross-validation
-grid_search = GridSearchCV(svm_clf, param_grid, cv=5)
+grid_search = GridSearchCV(svm_clf, param_grid, cv=5,n_jobs=-1, scoring='roc_auc')
 
 # Fit the grid search to your training data
 grid_search.fit(x_train, y_train, sample_weight=w_train)
@@ -598,7 +598,7 @@ param_grid = {
 svm_clf = svm.SVC(probability=True)
 
 # Perform grid search with cross-validation
-grid_search = GridSearchCV(svm_clf, param_grid, cv=5)
+grid_search = GridSearchCV(svm_clf, param_grid, cv=5,n_jobs=-1, scoring='roc_auc')
 
 # Fit the grid search to your training data
 grid_search.fit(x_train, y_train, sample_weight=w_train)

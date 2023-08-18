@@ -601,7 +601,7 @@ n_features = 2
 n_layers = 3
 n_datapoints = 1000
 # We create a quantum device with n_features "wires" (or qubits)
-dev =  ibm_dev = qml.device('qiskit.ibmq', wires=n_features, backend='ibmq_quito', provider=provider, shots=2000)
+dev =  ibm_dev = qml.device('qiskit.ibmq', wires=n_features, backend='ibmq_quito', provider=provider, shots=20000)
 x_train_batches, y_train_batches, w_train_batches, x_val_batches, y_val_batches, w_val_batches, x_test_batches, y_test_batches, w_test_batches = train_val_test(n_datapoints,5,n_features,'sbs','qml')
 y_pred_prob_val_list = []
 y_pred_prob_test_list= []
@@ -681,7 +681,7 @@ n_features = 2
 n_layers = 3
 n_datapoints = 1000
 # We create a quantum device with n_features "wires" (or qubits)
-dev =  ibm_dev = qml.device('qiskit.ibmq', wires=n_features, backend='ibmq_qasm_simulator', provider=provider, shots=2000,noise_model=noise_model)
+dev =  ibm_dev = qml.device('qiskit.ibmq', wires=n_features, backend='ibmq_qasm_simulator', provider=provider, shots=20000,noise_model=noise_model)
 x_train_batches, y_train_batches, w_train_batches, x_val_batches, y_val_batches, w_val_batches, x_test_batches, y_test_batches, w_test_batches = train_val_test(n_datapoints,5,n_features,'sbs','qml')
 y_pred_prob_val_list = []
 y_pred_prob_test_list= []

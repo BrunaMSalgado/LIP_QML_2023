@@ -492,7 +492,7 @@ def test_vqc_E(n_features, n_layers,x_test,y_test,w_test, weights):
 n_features = 5
 n_layers = 5
 n_datapoints = 4000
-x_train_batches, y_train_batches, w_train_batches, x_val_batches, y_val_batches, w_val_batches, x_test_batches, y_test_batches, w_test_batches = train_val_test(n_datapoints,5,n_features,'sbs','qml')
+x_train_batches, y_train_batches, w_train_batches, x_val_batches, y_val_batches, w_val_batches, x_test_batches, y_test_batches, w_test_batches = train_val_test(n_datapoints,5,n_features,'pca','qml')
 y_pred_prob_val_list = []
 y_pred_prob_test_list= []
 auc_val_list = []
@@ -602,7 +602,7 @@ n_layers = 5
 n_datapoints = 4000
 # We create a quantum device with n_features "wires" (or qubits)
 dev =  ibm_dev = qml.device('qiskit.ibmq', wires=n_features, backend='ibmq_quito', provider=provider, shots=20000)
-x_train_batches, y_train_batches, w_train_batches, x_val_batches, y_val_batches, w_val_batches, x_test_batches, y_test_batches, w_test_batches = train_val_test(n_datapoints,5,n_features,'sbs','qml')
+x_train_batches, y_train_batches, w_train_batches, x_val_batches, y_val_batches, w_val_batches, x_test_batches, y_test_batches, w_test_batches = train_val_test(n_datapoints,5,n_features,'pca','qml')
 y_pred_prob_val_list = []
 y_pred_prob_test_list= []
 auc_val_list = []
@@ -682,7 +682,7 @@ n_layers = 5
 n_datapoints = 4000
 # We create a quantum device with n_features "wires" (or qubits)
 dev =  ibm_dev = qml.device('qiskit.ibmq', wires=n_features, backend='ibmq_qasm_simulator', provider=provider, shots=20000,noise_model=noise_model)
-x_train_batches, y_train_batches, w_train_batches, x_val_batches, y_val_batches, w_val_batches, x_test_batches, y_test_batches, w_test_batches = train_val_test(n_datapoints,5,n_features,'sbs','qml')
+x_train_batches, y_train_batches, w_train_batches, x_val_batches, y_val_batches, w_val_batches, x_test_batches, y_test_batches, w_test_batches = train_val_test(n_datapoints,5,n_features,'pca','qml')
 y_pred_prob_val_list = []
 y_pred_prob_test_list= []
 auc_val_list = []

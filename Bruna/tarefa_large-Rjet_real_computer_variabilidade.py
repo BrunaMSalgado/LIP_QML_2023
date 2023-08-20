@@ -510,7 +510,7 @@ for i in range (5):
     # We create a quantum device with n_features "wires" (or qubits)
     dev = qml.device('default.qubit', wires=n_features)
     # train the model
-    best_score, best_weights = train_vqc(n_features, n_layers,x_train_batches[i],y_train_batches[i],w_train_batches[i], x_val_batches[i],y_val_batches[i],w_train_batches[i],0.01, weights, 500)
+    best_score, best_weights = train_vqc(n_features, n_layers,x_train_batches[i],y_train_batches[i],w_train_batches[i], x_val_batches[i],y_val_batches[i],w_train_batches[i],0.5, weights, 500)
     #test
     auc_val_list.append(test_vqc(n_features, n_layers,x_val_batches[i],y_val_batches[i],w_val_batches[i], best_weights))
     auc_test_list.append(test_vqc(n_features, n_layers,x_test_batches[i],y_test_batches[i],w_test_batches[i], best_weights))
@@ -621,7 +621,7 @@ for i in range (5):
     # We create a quantum device with n_features "wires" (or qubits)
     dev = qml.device('default.qubit', wires=n_features)
     # train the model
-    best_score, best_weights = train_vqc(n_features, n_layers,x_train_batches[i],y_train_batches[i],w_train_batches[i], x_val_batches[i],y_val_batches[i],w_train_batches[i],0.01, weights, 500)
+    best_score, best_weights = train_vqc(n_features, n_layers,x_train_batches[i],y_train_batches[i],w_train_batches[i], x_val_batches[i],y_val_batches[i],w_train_batches[i],0.5, weights, 500)
     #test
     auc_val_list.append(test_vqc(n_features, n_layers,x_val_batches[i],y_val_batches[i],w_val_batches[i], best_weights))
     auc_test_list.append(test_vqc(n_features, n_layers,x_test_batches[i],y_test_batches[i],w_test_batches[i], best_weights))
@@ -700,7 +700,7 @@ for i in range (5):
     # We create a quantum device with n_features "wires" (or qubits)
     dev = qml.device('default.qubit', wires=n_features)
     # train the model
-    best_score, best_weights = train_vqc(n_features, n_layers,x_train_batches[i],y_train_batches[i],w_train_batches[i], x_val_batches[i],y_val_batches[i],w_train_batches[i],0.01, weights, 500)
+    best_score, best_weights = train_vqc(n_features, n_layers,x_train_batches[i],y_train_batches[i],w_train_batches[i], x_val_batches[i],y_val_batches[i],w_train_batches[i],0.5, weights, 500)
     #test
     auc_val_list.append(test_vqc(n_features, n_layers,x_val_batches[i],y_val_batches[i],w_val_batches[i], best_weights))
     auc_test_list.append(test_vqc(n_features, n_layers,x_test_batches[i],y_test_batches[i],w_test_batches[i], best_weights))
